@@ -130,7 +130,6 @@ def logout():
     else:
         return util.to_json(http_status_codes.BAD_REQUEST, None)
     return_value = authenticator_dao.logout(data)
-    print "---------"
     print return_value
     if return_value == -1:
         return util.to_json(http_status_codes.SERVER_ERROR, http_status_codes.MESSAGE_SERVER_ERROR)
